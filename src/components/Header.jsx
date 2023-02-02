@@ -51,10 +51,31 @@ const Header = () => {
         <nav className='px-5'>
           <ul className='nav gap-5'>
             {navItems.map((item, index) => (
-              <li key={index} className='nav-item'>
-                <a className='nav-link link-light fs-5 fw-semibold' href={`/#`}>
+              <li key={index} className='nav-item dropdown'>
+                <a
+                  href='#'
+                  data-bs-toggle='dropdown'
+                  aria-expanded='false'
+                  className='nav-link btn link-light fs-5 fw-semibold dropdown-toggle'>
                   {item}
                 </a>
+                <ul class='dropdown-menu'>
+                  <li>
+                    <a class='dropdown-item' href='#'>
+                      Action
+                    </a>
+                  </li>
+                  <li>
+                    <a class='dropdown-item' href='#'>
+                      Another action
+                    </a>
+                  </li>
+                  <li>
+                    <a class='dropdown-item' href='#'>
+                      Something else here
+                    </a>
+                  </li>
+                </ul>
               </li>
             ))}
           </ul>
