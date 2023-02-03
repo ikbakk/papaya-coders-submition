@@ -59,19 +59,19 @@ const Header = () => {
                   className='nav-link btn link-light fs-5 fw-semibold dropdown-toggle'>
                   {item}
                 </a>
-                <ul class='dropdown-menu'>
+                <ul className='dropdown-menu'>
                   <li>
-                    <a class='dropdown-item' href='#'>
+                    <a className='dropdown-item' href='#'>
                       Action
                     </a>
                   </li>
                   <li>
-                    <a class='dropdown-item' href='#'>
+                    <a className='dropdown-item' href='#'>
                       Another action
                     </a>
                   </li>
                   <li>
-                    <a class='dropdown-item' href='#'>
+                    <a className='dropdown-item' href='#'>
                       Something else here
                     </a>
                   </li>
