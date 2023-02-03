@@ -1,7 +1,9 @@
+import Blogs from './Blogs'
 import Categories from './Categories'
 import EquipmentProvided from './EquipmentProvided'
 import Hero from './Hero'
 import LatestJob from './LatestJob'
+import ThingsDone from './ThingsDone'
 
 const Layout = () => {
   return (
@@ -10,6 +12,8 @@ const Layout = () => {
       <Categories />
       <LatestJob />
       <EquipmentProvided />
+      <ThingsDone />
+      <Blogs />
     </>
   )
 }

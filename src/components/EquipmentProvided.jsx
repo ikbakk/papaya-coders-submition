@@ -86,14 +86,14 @@ const EquipmentProvided = () => {
       id='equipment'
       className='py-5 d-flex flex-column align-items-center gap-5'>
       <h1 className='text-center fw-bold'>Equipment Provided</h1>
-      <ul className='nav nav-tabs gap-5'>
+      <ul className='nav nav-tabs gap-1 gap-md-5'>
         {categories.map((category, index) => {
           const active = tabActive === category ? 'active' : ''
           return (
             <li
               key={index}
               onClick={() => setTabActive(category.arr)}
-              className='nav-item'>
+              className='nav-item flex-md-row flex-column'>
               <a className={`nav-link ${active} link-danger`}>
                 {category.title}
               </a>
@@ -102,7 +102,7 @@ const EquipmentProvided = () => {
         })}
       </ul>
       <div>
-        <div className='gap-2 d-flex'>
+        <div className='gap-2 d-flex flex-column flex-md-row'>
           {tabActive.map((tab, index) => (
             <div key={index} className='nav-item'>
               <div className='card'>
