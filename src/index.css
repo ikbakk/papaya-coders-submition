@@ -95,3 +95,9 @@ figure {
 #things-done-card {
   background-color: #ececec;
 }
+
+#testimonials blockquote {
+  line-height: 1.4;
+  position: relative;
+  color: #3c3c3c;
+}
