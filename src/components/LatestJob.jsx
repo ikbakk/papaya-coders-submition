@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import LatestJobCard from './LatestJobCard'
+import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 
 const jobs = [
   {
@@ -65,14 +66,6 @@ const jobs = [
     location: 'Mumbai',
     description:
       'lorem Ipsum Dolor Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
-  },
-  {
-    link: '#',
-    title: 'Need A Photographer 9',
-    posted: '5 Months ago',
-    location: 'Mumbai',
-    description:
-      'lorem Ipsum Dolor Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
   }
 ]
 
@@ -91,7 +84,7 @@ const LatestJob = () => {
 
   useEffect(() => {
     if (page * 4 >= jobs.length) {
-      setIsNextDisabled(true)
+      setPage(0)
     }
 
     if (page <= 0) {
@@ -102,19 +95,29 @@ const LatestJob = () => {
   }, [page])
 
   return (
-    <section id='latest-job' className='py-5'>
-      <div className='container'>
+    <section id='latest-job' className='py-5  '>
+      <div className='container d-flex position-relative flex-column'>
         <h1 className='text-center'>Latest Job</h1>
-        <div className='row row-cols-md-2 row-cols-1 px-5 row-gap-3'>
-          {jobs.slice(page * 4, 4 * (page + 1)).map((job, index) => (
-            <LatestJobCard key={index} {...job} />
-          ))}
+        <div className=''>
+          <div className='row row-cols-md-2 row-cols-1 px-5 row-gap-3'>
+            {jobs.slice(page * 4, 4 * (page + 1)).map((job, index) => (
+              <LatestJobCard key={index} {...job} />
+            ))}
+          </div>
         </div>
-        <button disabled={isNextDisabled} onClick={nextPage}>
-          next
+      </div>
+      <div className='d-flex pt-5 gap-5 justify-content-center'>
+        <button
+          className='btn btn-light'
+          disabled={isPrevDisabled}
+          onClick={prevPage}>
+          <BsChevronLeft color='#3e3e3e' size={32} />
         </button>
-        <button disabled={isPrevDisabled} onClick={prevPage}>
-          prev
+        <button
+          className='btn btn-light'
+          disabled={isNextDisabled}
+          onClick={nextPage}>
+          <BsChevronRight color='#3e3e3e' size={32} />
         </button>
       </div>
     </section>

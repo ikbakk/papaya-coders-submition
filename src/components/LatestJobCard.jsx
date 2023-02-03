@@ -1,18 +1,37 @@
-import React from 'react'
+import { IoLocationSharp } from 'react-icons/io5'
+import { BiTimeFive } from 'react-icons/bi'
 
 const LatestJobCard = ({ title, posted, location, description, link }) => {
   return (
     <div className='py-3'>
       <div className='card'>
-        <div className='card-body'>
-          <h5 className='card-title'>{title}</h5>
-          <p className='card-text'>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href='#' className='btn btn-primary'>
-            Go somewhere
-          </a>
+        <div className='card-body d-flex gap-3'>
+          <figure>
+            <img src='../assets/latest-jobs.png' alt='latestjob' />
+          </figure>
+          <div>
+            <h5 className='card-title'>{title}</h5>
+            <div className='d-flex justify-content-between'>
+              <div className='d-flex gap-2'>
+                <div>
+                  <BiTimeFive size={22} />
+                </div>
+                <p>{posted}</p>
+              </div>
+              <div className='d-flex gap-2'>
+                <div>
+                  <IoLocationSharp size={22} />
+                </div>
+                <p>{location}</p>
+              </div>
+            </div>
+            <p className='card-text'>{description}</p>
+            <div className='d-flex justify-content-center w-100'>
+              <a href={`/${link}`} className='btn btn-danger w-75'>
+                View
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
