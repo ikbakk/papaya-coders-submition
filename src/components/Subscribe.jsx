@@ -13,13 +13,13 @@ const Subscribe = () => {
           <span
             className='input-group-text bg-dark text-light'
             id='basic-addon1'>
-            @
+            Email
           </span>
           <input
             type='text'
             className='form-control bg-dark text-light'
-            placeholder='Username'
-            aria-label='Username'
+            placeholder='Youremail@example.com'
+            aria-label='Youremail@example.com'
             aria-describedby='basic-addon1'
           />
         </form>
