@@ -7,7 +7,7 @@ const Testimonials = () => {
   return (
     <section
       id='testimonials'
-      className='py-5 vh-100 w-100 d-flex flex-column justify-content-center align-items-center'>
+      className='py-5 w-100 d-flex flex-column justify-content-center align-items-center'>
       <h1 className='text-center text-danger fw-bold'>Testimonials</h1>
 
       <div className='container'>

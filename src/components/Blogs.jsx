@@ -34,7 +34,7 @@ const blogPosts = [
 
 const Blogs = () => {
   return (
-    <section className='py-5 px-2 px-md-5'>
+    <section className='pt-5 px-2 px-md-5'>
       <h1 className='text-center text-danger fw-bold'>Blogs</h1>
       <div className='row gap-2 py-5'>
         {blogPosts.map((post, index) => {

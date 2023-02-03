@@ -101,3 +101,7 @@ figure {
   position: relative;
   color: #3c3c3c;
 }
+
+#subscribe {
+  bottom: -2rem;
+}
