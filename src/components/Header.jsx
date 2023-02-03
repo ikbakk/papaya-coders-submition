@@ -5,7 +5,7 @@ const navAbout = ['About Us', 'Contact Us']
 
 const Header = () => {
   return (
-    <header className='w-100 d-flex py-2 bg-light flex-column'>
+    <header className='w-100 d-flex py-2 pb-0 bg-light flex-column'>
       <section className='flex-row px-2 px-md-5 d-flex align-items-center justify-content-between'>
         <div className='d-flex align-items-center gap-4'>
           <figure>

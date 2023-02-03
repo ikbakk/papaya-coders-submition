@@ -6,3 +6,59 @@
 .btn-bg {
   background-color: #ed2e52;
 }
+
+.hero-bg {
+  z-index: -1;
+  object-fit: cover;
+}
+
+.hero-title {
+  letter-spacing: 0.4rem;
+}
+
+.categories h1,
+figure {
+  color: #bd1635;
+}
+
+.categories button {
+  background-color: #6c757d40;
+  color: #686868;
+}
+
+.categories h4 {
+  color: #504c4c;
+}
+
+.categories p {
+  color: #999999;
+}
+
+.categories button:hover {
+  color: #313131;
+  background-color: #6c757d66;
+}
+
+.hero-overlay {
+  background: rgb(119, 23, 41);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(119, 23, 41, 0.8799894957983193) 1%,
+    rgba(242, 49, 85, 0.37298669467787116) 49%,
+    rgba(0, 212, 255, 0.21052170868347342) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(119, 23, 41, 0.8799894957983193) 1%,
+    rgba(242, 49, 85, 0.37298669467787116) 49%,
+    rgba(0, 212, 255, 0.21052170868347342) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(119, 23, 41, 0.8799894957983193) 1%,
+    rgba(242, 49, 85, 0.37298669467787116) 49%,
+    rgba(0, 212, 255, 0.21052170868347342) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#771729",endColorstr="#00d4ff",GradientType=1);
+  z-index: -1;
+}

@@ -1,5 +1,13 @@
+import Categories from './Categories'
+import Hero from './Hero'
+
 const Layout = () => {
-  return <>Layout</>
+  return (
+    <>
+      <Hero />
+      <Categories />
+    </>
+  )
 }
 
 export default Layout
