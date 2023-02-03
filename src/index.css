@@ -1,3 +1,7 @@
+a {
+  cursor: pointer;
+}
+
 .bg-header-tab {
   background-color: #ed2e52;
   color: #fff;
@@ -69,4 +73,12 @@ figure {
 
 #latest-job h1 {
   color: #ececec;
+}
+
+#equipment h1 {
+  color: #bd1635;
+}
+
+#equipment img {
+  object-fit: scale-down;
 }

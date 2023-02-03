@@ -5,8 +5,8 @@ const LatestJobCard = ({ title, posted, location, description, link }) => {
   return (
     <div className='py-3'>
       <div className='card'>
-        <div className='card-body d-flex gap-3'>
-          <figure>
+        <div className='card-body d-flex flex-column flex-md-row gap-3'>
+          <figure className='d-flex d-md-block justify-content-center'>
             <img src='../assets/latest-jobs.png' alt='latestjob' />
           </figure>
           <div>

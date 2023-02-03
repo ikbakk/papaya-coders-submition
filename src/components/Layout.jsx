@@ -1,4 +1,5 @@
 import Categories from './Categories'
+import EquipmentProvided from './EquipmentProvided'
 import Hero from './Hero'
 import LatestJob from './LatestJob'
 
@@ -8,6 +9,7 @@ const Layout = () => {
       <Hero />
       <Categories />
       <LatestJob />
+      <EquipmentProvided />
     </>
   )
 }
