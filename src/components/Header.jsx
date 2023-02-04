@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { RxHamburgerMenu } from 'react-icons/rx'
 
 const navItems = ['Equipment', 'Blogs', 'Plans']
@@ -27,12 +28,16 @@ const Header = () => {
           </nav>
         </div>
         <div className='gap-2 d-none d-md-flex d-flex'>
-          <button className='btn-danger btn fw-bold btn-lg px-5 rounded-4'>
-            Login
-          </button>
-          <button className='btn btn-lg rounded-4 px-5 text-danger fw-bold'>
-            Register
-          </button>
+          <Link to='/login'>
+            <button className='btn-danger btn fw-bold btn-lg px-5 rounded-4'>
+              Login
+            </button>
+          </Link>
+          <Link to='/register'>
+            <button className='btn btn-lg rounded-4 px-5 text-danger fw-bold'>
+              Register
+            </button>
+          </Link>
         </div>
         <div className='d-md-none'>
           <button
@@ -107,13 +112,17 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <div className='gap-2 pt-2 flex-column d-flex'>
-          <button className='btn-danger btn fw-bold btn-lg px-5 rounded-4'>
-            Login
-          </button>
-          <button className='btn btn-lg rounded-4 px-5 text-danger fw-bold'>
-            Register
-          </button>
+        <div className='gap-2 pt-2 flex-column d-flex align-items-center'>
+          <Link to='/login'>
+            <button className='btn-danger btn fw-bold btn-lg px-5 rounded-4'>
+              Login
+            </button>
+          </Link>
+          <Link to='/register'>
+            <button className='btn btn-lg rounded-4 px-5 text-danger fw-bold'>
+              Register
+            </button>
+          </Link>
         </div>
       </div>
     </header>

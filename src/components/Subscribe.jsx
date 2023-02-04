@@ -15,6 +15,7 @@ const Subscribe = () => {
             id='basic-addon1'>
             Email
           </span>
+          ``
           <input
             type='text'
             className='form-control bg-dark text-light'
