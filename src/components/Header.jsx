@@ -10,7 +10,7 @@ const Header = () => {
       <section className='flex-row px-2 px-md-5 d-flex align-items-center justify-content-between'>
         <div className='d-flex align-items-center gap-4'>
           <figure>
-            <img width={147} src='../public/assets/logo.png' alt='logo' />
+            <img width={147} src='../assets/logo.png' alt='logo' />
           </figure>
           <nav className='d-none d-lg-flex'>
             <ul className='nav font fs-5 fw-semibold'>
