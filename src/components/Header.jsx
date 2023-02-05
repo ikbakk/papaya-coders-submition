@@ -23,9 +23,9 @@ const Header = () => {
               <a href='/#equipment' className='nav-link link-light'>
                 <li>Sale / Rent</li>
               </a>
-              <a href='/blogs' className='nav-link link-light'>
+              <Link href='/blogs' className='nav-link link-light'>
                 <li>Our Blog</li>
-              </a>
+              </Link>
             </ul>
           </nav>
         </div>
