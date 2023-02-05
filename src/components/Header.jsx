@@ -6,8 +6,39 @@ const navAbout = ['About Us', 'Contact Us']
 
 const Header = () => {
   return (
-    <header className='w-100 d-flex py-2 pb-0 bg-light flex-column'>
+    <header className='w-100 d-flex py-2 pb-0 flex-column header-bg'>
       <section className='flex-row px-2 px-md-5 d-flex align-items-center justify-content-between'>
+        <div className='d-flex align-items-center gap-4'>
+          <figure>
+            <img width={147} src='../assets/logo.png' alt='logo' />
+          </figure>
+        </div>
+        <div className='gap-2 d-none d-md-flex d-flex'>
+          <Link to='/login'>
+            <button className='btn-danger btn rounded-0 fw-bold px-5'>
+              Login
+            </button>
+          </Link>
+          <Link to='/register'>
+            <button className='btn px-5 btn-outline-danger rounded-0 fw-bold'>
+              Register
+            </button>
+          </Link>
+        </div>
+        <div className='d-md-none'>
+          <button
+            type='button'
+            data-bs-toggle='collapse'
+            data-bs-target='#collapseNavbar'
+            aria-controls='collapseNavbar'
+            aria-expanded='false'
+            className='btn btn-lg d-flex align-items-center btn-light'>
+            <RxHamburgerMenu size={32} />
+          </button>
+        </div>
+      </section>
+
+      {/* <section className='flex-row px-2 px-md-5 d-flex align-items-center justify-content-between'>
         <div className='d-flex align-items-center gap-4'>
           <figure>
             <img width={147} src='../assets/logo.png' alt='logo' />
@@ -124,7 +155,7 @@ const Header = () => {
             </button>
           </Link>
         </div>
-      </div>
+      </div> */}
     </header>
   )
 }

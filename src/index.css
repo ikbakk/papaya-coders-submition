@@ -1,46 +1,71 @@
-a {
-  cursor: pointer;
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+.text-red {
+  color: #ed2e52;
+}
+
+.bg-red {
+  background-color: #ed2e52;
 }
 
 .pointer {
   cursor: pointer;
 }
 
-.bg-header-tab {
-  background-color: #ed2e52;
-  color: #fff;
-}
-
 .btn-bg {
   background-color: #ed2e52;
+}
+
+.header-bg {
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8799894957983193) 1%,
+    rgba(0, 0, 0, 0.21052170868347342) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8799894957983193) 1%,
+    rgba(0, 0, 0, 0.21052170868347342) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8799894957983193) 1%,
+    rgba(0, 0, 0, 0.21052170868347342) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+}
+
+.hero-content {
+  height: 90vh;
 }
 
 .hero-bg {
   z-index: -1;
   object-fit: cover;
+  height: 125vh;
 }
 
 .hero-overlay {
-  background: rgb(119, 23, 41);
+  background: rgb(0, 0, 0);
   background: -moz-linear-gradient(
-    90deg,
-    rgba(119, 23, 41, 0.8799894957983193) 1%,
-    rgba(242, 49, 85, 0.37298669467787116) 49%,
-    rgba(0, 212, 255, 0.21052170868347342) 100%
+    0deg,
+    rgba(0, 0, 0, 0.8799894957983193) 1%,
+    rgba(0, 0, 0, 0.21052170868347342) 100%
   );
   background: -webkit-linear-gradient(
-    90deg,
-    rgba(119, 23, 41, 0.8799894957983193) 1%,
-    rgba(242, 49, 85, 0.37298669467787116) 49%,
-    rgba(0, 212, 255, 0.21052170868347342) 100%
+    0deg,
+    rgba(0, 0, 0, 0.8799894957983193) 1%,
+    rgba(0, 0, 0, 0.21052170868347342) 100%
   );
   background: linear-gradient(
-    90deg,
-    rgba(119, 23, 41, 0.8799894957983193) 1%,
-    rgba(242, 49, 85, 0.37298669467787116) 49%,
-    rgba(0, 212, 255, 0.21052170868347342) 100%
+    0deg,
+    rgba(0, 0, 0, 0.8799894957983193) 1%,
+    rgba(0, 0, 0, 0.21052170868347342) 100%
   );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#771729",endColorstr="#00d4ff",GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
   z-index: -1;
 }
 

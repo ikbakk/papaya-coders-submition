@@ -30,7 +30,7 @@ const categories = [
 
 const Categories = () => {
   return (
-    <section className='bg-light py-5 px-2 px-md-5 d-flex flex-column align-items-center w-100 categories'>
+    <section className='bg-dark py-5 px-2 px-md-5 d-flex flex-column align-items-center w-100 categories'>
       <div className='col-sm-12 col-md-6'>
         <h1 className='text-center fw-bolder text-uppercase'>
           Get work done in over four categories

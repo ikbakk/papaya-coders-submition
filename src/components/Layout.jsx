@@ -16,7 +16,7 @@ const Layout = () => {
       <LatestJob />
       <EquipmentProvided />
       <ThingsDone />
-      <Blogs />
+      {/* <Blogs /> //bikin overflow */}
       <Testimonials />
       <FAQ />
       <Subscribe />
