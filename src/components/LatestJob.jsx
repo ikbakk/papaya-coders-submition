@@ -70,7 +70,7 @@ const jobs = [
 
 const LatestJob = () => {
   const [viewMore, setViewMore] = useState(false)
-  const [cardShown, setCardShown] = useState(4)
+  const [cardShown, setCardShown] = useState(3)
   const [buttonText, setButtonText] = useState('View More')
 
   useEffect(() => {
@@ -78,19 +78,21 @@ const LatestJob = () => {
       setCardShown(jobs.length)
       setButtonText('View Less')
     } else {
-      setCardShown(4)
+      setCardShown(3)
       setButtonText('View More')
     }
   }, [viewMore])
 
   return (
-    <section id='latest-job' className='py-5  '>
-      <div className='container d-flex position-relative flex-column gap-5'>
+    <section
+      id='latest-job'
+      className='py-5 px-2 px-md-5 w-100 overflow-hidden'>
+      <div className='d-flex flex-column align-items-center gap-5'>
         <h1 className='text-center text-uppercase text-dark-outline text-red'>
           Latest Job
         </h1>
-        <div className=''>
-          <div className='row px-5 gap-2'>
+        <div>
+          <div className='d-flex flex-wrap px-5 gap-2'>
             {jobs.slice(0, cardShown).map((job, index) => (
               <LatestJobCard key={index} {...job} />
             ))}

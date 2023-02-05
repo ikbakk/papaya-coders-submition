@@ -2,11 +2,16 @@
   font-family: 'Raleway', sans-serif;
 }
 
+.pointer,
 a {
   cursor: pointer;
 }
 .text-red {
   color: #ed2e52;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 .text-red-outline {
@@ -64,17 +69,20 @@ a {
   background: rgb(0, 0, 0);
   background: -moz-linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.8799894957983193) 1%,
+    rgba(0, 0, 0, 0.8799894957983193) 0%,
+    rgba(0, 0, 0, 0.4542191876750701) 79%,
     rgba(0, 0, 0, 0.21052170868347342) 100%
   );
   background: -webkit-linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.8799894957983193) 1%,
+    rgba(0, 0, 0, 0.8799894957983193) 0%,
+    rgba(0, 0, 0, 0.4542191876750701) 79%,
     rgba(0, 0, 0, 0.21052170868347342) 100%
   );
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.8799894957983193) 1%,
+    rgba(0, 0, 0, 0.8799894957983193) 0%,
+    rgba(0, 0, 0, 0.4542191876750701) 79%,
     rgba(0, 0, 0, 0.21052170868347342) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
@@ -119,11 +127,11 @@ a {
   object-fit: cover;
 }
 
-#latest-job {
-  background-color: #ed2e52;
+.testi-card:hover {
+  transform: scale(1.05);
 }
 
-#equipment {
+#latest-job {
   background-color: #ed2e52;
 }
 
@@ -132,14 +140,12 @@ a {
   height: 5rem;
 }
 
-#things-done {
+#equipment {
   background-color: #ed2e52;
 }
 
-#testimonials blockquote {
-  line-height: 1.4;
-  position: relative;
-  color: #3c3c3c;
+#things-done {
+  background-color: #ed2e52;
 }
 
 #subscribe {
