@@ -2,10 +2,10 @@ import React from 'react'
 
 const Subscribe = () => {
   return (
-    <section className='py-5 position-relative d-flex justify-content-center'>
+    <section className='py-5 position-relative d-flex justify-content-center bg-light'>
       <div
         id='subscribe'
-        className='bg-danger position-absolute p-2 px-4 py-md-3 px-md-5 rounded-4 d-flex flex-column align-items-center'>
+        className='bg-danger position-absolute px-2 py-4 px-4 py-md-3 px-md-5 rounded-3 d-flex flex-column align-items-center'>
         <h1 className='text-light fw-light text-center fs-2'>
           Subscribe to Our News Letter
         </h1>

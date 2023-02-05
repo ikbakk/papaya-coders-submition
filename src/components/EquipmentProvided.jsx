@@ -110,7 +110,7 @@ const EquipmentProvided = () => {
     <section
       id='equipment'
       className='py-5 d-flex flex-column align-items-center gap-5 px-2 px-md-5'>
-      <h1 className='text-center fw-bold text-red text-dark-outline text-uppercase'>
+      <h1 className='text-center pt-5 fw-bold text-red text-dark-outline text-uppercase'>
         Equipment Provided
       </h1>
       <div className='bg-dark py-5 px-2 px-md-5 w-100 d-flex flex-column justify-content-center align-items-center gap-5'>

@@ -30,8 +30,10 @@ const categories = [
 
 const Categories = () => {
   return (
-    <section className='bg-dark py-5 px-2 px-md-5 d-flex flex-column align-items-center w-100 categories'>
-      <div className='col-sm-12 col-md-6'>
+    <section
+      id='hire'
+      className='bg-dark py-5 px-2 px-md-5 d-flex flex-column align-items-center w-100 categories'>
+      <div className='col-sm-12 pt-5 col-md-6'>
         <h1 className='text-center text-red-outline text-dark fw-bolder text-uppercase'>
           Get work done in over four categories
         </h1>

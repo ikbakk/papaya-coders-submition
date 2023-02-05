@@ -1,4 +1,3 @@
-import Blogs from './Blogs'
 import Categories from './Categories'
 import EquipmentProvided from './EquipmentProvided'
 import Hero from './Hero'
@@ -16,7 +15,6 @@ const Layout = () => {
       <LatestJob />
       <EquipmentProvided />
       <ThingsDone />
-      {/* <Blogs /> //bikin overflow */}
       <Testimonials />
       <FAQ />
       <Subscribe />

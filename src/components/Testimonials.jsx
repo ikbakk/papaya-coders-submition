@@ -39,13 +39,15 @@ const Testimonials = () => {
       <h3 className='text-start text-dark w-100 py-3 fw-light'>
         What other people said about us
       </h3>
-      <div className='d-none py-5 d-md-flex flex-column flex-md-row w-100 justify-content-evenly'>
-        <div className='w-75 d-flex flex-column gap-2 px-4'>
+
+      <div className='d-flex py-5 d-md-flex flex-column flex-md-row w-100 justify-content-evenly gap-5'>
+        <div className='w-100 d-flex flex-column gap-2 px-4'>
           {testimonials.map((testimonial) => (
             <div
+              key={testimonial.id}
               onClick={() => setSelected(testimonial.id)}
               className='d-flex gap-3 pointer px-4 pb-1 pt-4 align-items-center bg-dark text-light testi-card duration-300'>
-              <TestimonialsCard key={testimonial.id} {...testimonial} />
+              <TestimonialsCard {...testimonial} />
             </div>
           ))}
         </div>
@@ -56,6 +58,8 @@ const Testimonials = () => {
               <TestimonialsDetail key={testimonial.id} {...testimonial} />
             ))}
         </div>
+
+        <div></div>
       </div>
     </section>
   )

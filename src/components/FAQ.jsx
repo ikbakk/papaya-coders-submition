@@ -29,11 +29,11 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <section className='py-5 px-2 px-md-5 d-flex flex-column gap-5 align-items-center'>
-      <h1 className='text-center text-danger fw-bold'>
+    <section className='py-0 px-2 px-md-5 d-flex flex-column gap-5 align-items-center bg-light'>
+      <h1 className='text-center text-danger fw-bold text-uppercase text-red-outline text-light'>
         Frequently Asked Questions
       </h1>
-      <div className='accordion text-danger accordion-flush w-50' id='faq'>
+      <div className='accordion text-danger accordion-flush w-75' id='faq'>
         {faqs.map((faq) => (
           <FAQList key={faq.id} {...faq} />
         ))}

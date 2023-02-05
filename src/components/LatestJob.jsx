@@ -88,7 +88,7 @@ const LatestJob = () => {
       id='latest-job'
       className='py-5 px-2 px-md-5 w-100 overflow-hidden'>
       <div className='d-flex flex-column align-items-center gap-5'>
-        <h1 className='text-center text-uppercase text-dark-outline text-red'>
+        <h1 className='text-center pt-5 text-uppercase text-dark-outline text-red'>
           Latest Job
         </h1>
         <div>

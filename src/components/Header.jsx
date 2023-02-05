@@ -6,12 +6,28 @@ const navAbout = ['About Us', 'Contact Us']
 
 const Header = () => {
   return (
-    <header className='w-100 d-flex py-3 pb-0 flex-column header-bg sticky-top'>
+    <header className='w-100 d-flex pb-0 flex-column header-bg sticky-top'>
       <section className='flex-row px-2 px-md-5 d-flex align-items-center justify-content-between'>
         <div className='d-flex align-items-center gap-4'>
-          <figure>
-            <img width={120} src='../assets/logo.png' alt='logo' />
+          <figure className='d-flex align-items-center pt-3'>
+            <img width={60} src='../assets/logo.png' alt='logo' />
           </figure>
+          <nav className='d-none d-md-flex'>
+            <ul className='nav'>
+              <a href='/#' className='nav-link link-light'>
+                <li>Home</li>
+              </a>
+              <a href='/#hire' className='nav-link link-light'>
+                <li>Hire a Talent</li>
+              </a>
+              <a href='/#equipment' className='nav-link link-light'>
+                <li>Sale / Rent</li>
+              </a>
+              <a href='/blogs' className='nav-link link-light'>
+                <li>Our Blog</li>
+              </a>
+            </ul>
+          </nav>
         </div>
         <div className='gap-2 d-none d-md-flex d-flex'>
           <Link to='/login'>
@@ -32,11 +48,41 @@ const Header = () => {
             data-bs-target='#collapseNavbar'
             aria-controls='collapseNavbar'
             aria-expanded='false'
-            className='btn btn-lg d-flex align-items-center btn-light'>
+            className='d-flex align-items-center btn btn-outline-light'>
             <RxHamburgerMenu size={32} />
           </button>
         </div>
       </section>
+
+      <div
+        id='collapseNavbar'
+        className='w-100 collapse mobile-header-extended-bg'>
+        <nav>
+          <ul className='nav flex-column text-center pt-3 fs-5 fw-semibold'>
+            <a href='/#' className='nav-link link-light'>
+              <li>Home</li>
+            </a>
+            <a href='/#hire' className='nav-link link-light'>
+              <li>Hire a Talent</li>
+            </a>
+            <a href='/#equipment' className='nav-link link-light'>
+              <li>Sale / Rent</li>
+            </a>
+          </ul>
+        </nav>
+        <div className='gap-2 pt-2 pb-3 flex-column d-flex align-items-center'>
+          <Link className='w-100 d-flex justify-content-center' to='/login'>
+            <button className='btn-danger btn fw-bold w-75 rounded-0 px-5'>
+              Login
+            </button>
+          </Link>
+          <Link className='w-100 d-flex justify-content-center' to='/register'>
+            <button className='btn btn-outline-danger w-75 rounded-0 px-5 fw-bold'>
+              Register
+            </button>
+          </Link>
+        </div>
+      </div>
 
       {/* <section className='flex-row px-2 px-md-5 d-flex align-items-center justify-content-between'>
         <div className='d-flex align-items-center gap-4'>
