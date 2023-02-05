@@ -32,20 +32,24 @@ const Categories = () => {
   return (
     <section className='bg-dark py-5 px-2 px-md-5 d-flex flex-column align-items-center w-100 categories'>
       <div className='col-sm-12 col-md-6'>
-        <h1 className='text-center fw-bolder text-uppercase'>
+        <h1 className='text-center text-red-outline text-dark fw-bolder text-uppercase'>
           Get work done in over four categories
         </h1>
       </div>
-      <div className='row row-cols-1 container row-cols-md-2'>
+      <div className='d-flex flex-column flex-md-row py-5 justify-content-between gap-2'>
         {categories.map((category) => (
           <div
             key={category.title}
-            className='col d-flex gap-5 py-3 align-items-center'>
-            <figure>{category.icon}</figure>
-            <div className='w-75'>
-              <h4>{category.title}</h4>
-              <p>{category.description}</p>
-              <button className='btn'>Read More</button>
+            className='d-flex gap-5 py-3 align-items-center'>
+            <div className='d-flex flex-column align-items-center gap-2'>
+              <figure className='d-flex text-red justify-content-center'>
+                {category.icon}
+              </figure>
+              <h4 className='text-light fw-bold'>{category.title}</h4>
+              <p className='text-center text-light px-3'>
+                {category.description}
+              </p>
+              <button className='w-75 btn btn-danger'>Read More</button>
             </div>
           </div>
         ))}
