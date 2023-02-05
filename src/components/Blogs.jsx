@@ -46,7 +46,7 @@ const Blogs = () => {
           Learn about Photography and Videography, discover our latest products
           updates, partnership announcements, user stories, and more.
         </h4>
-        <div className='row gap-2 py-5'>
+        <div className='d-flex flex-column flex-md-row flex-wrap gap-2 py-5'>
           {blogPosts.map((post, index) => {
             return (
               <div key={index} className='col d-flex justify-content-center'>
@@ -86,7 +86,7 @@ const Blogs = () => {
         </nav>
       </section>
 
-      <div className='d-flex justify-content-around w-100 py-5 bg-light text-dark'>
+      <div className='d-flex flex-column flex-md-row justify-content-around w-100 py-5 px-3 px-md-5 bg-light text-dark'>
         <div className='py-5'>
           <h1 className='text-dark-outline text-light fw-bold text-uppercase'>
             Stay up to date !
@@ -98,7 +98,7 @@ const Blogs = () => {
             <label className='form-label fw-bold'>
               Sign up to our newsletter
             </label>
-            <div className='d-flex'>
+            <div className='d-flex flex-column flex-md-row'>
               <input
                 type='text'
                 className='form-control rounded-0'
