@@ -41,7 +41,7 @@ const Header = () => {
             </button>
           </Link>
         </div>
-        <div className='d-md-none'>
+        <div className='d-md-none d-flex align-items-center gap-3'>
           <button
             type='button'
             data-bs-toggle='collapse'
@@ -68,6 +68,9 @@ const Header = () => {
             <a href='/#equipment' className='nav-link link-light'>
               <li>Sale / Rent</li>
             </a>
+            <Link to='/blogs' className='nav-link link-light'>
+              <li>Our Blog</li>
+            </Link>
           </ul>
         </nav>
         <div className='gap-2 pt-2 pb-3 flex-column d-flex align-items-center'>
