@@ -49,7 +49,9 @@ const Categories = () => {
               <p className='text-center text-light px-3'>
                 {category.description}
               </p>
-              <button className='w-75 btn btn-danger'>Read More</button>
+              <button className='w-75 btn btn-danger rounded-0'>
+                Read More
+              </button>
             </div>
           </div>
         ))}

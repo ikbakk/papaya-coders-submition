@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import LatestJobCard from './LatestJobCard'
-import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 
 const jobs = [
   {
@@ -70,56 +69,42 @@ const jobs = [
 ]
 
 const LatestJob = () => {
-  const [page, setPage] = useState(0)
-  const [isNextDisabled, setIsNextDisabled] = useState(false)
-  const [isPrevDisabled, setIsPrevDisabled] = useState(false)
-  const maxPage = Math.ceil(jobs.length / 4)
-
-  const nextPage = () => {
-    setPage(page + 1)
-  }
-  const prevPage = () => {
-    setPage(page - 1)
-  }
+  const [viewMore, setViewMore] = useState(false)
+  const [cardShown, setCardShown] = useState(4)
+  const [buttonText, setButtonText] = useState('View More')
 
   useEffect(() => {
-    if (page * 4 >= jobs.length) {
-      setPage(0)
-    }
-
-    if (page <= 0) {
-      setIsPrevDisabled(true)
+    if (viewMore === true) {
+      setCardShown(jobs.length)
+      setButtonText('View Less')
     } else {
-      setIsPrevDisabled(false)
+      setCardShown(4)
+      setButtonText('View More')
     }
-  }, [page])
+  }, [viewMore])
 
   return (
     <section id='latest-job' className='py-5  '>
-      <div className='container d-flex position-relative flex-column'>
-        <h1 className='text-center'>Latest Job</h1>
+      <div className='container d-flex position-relative flex-column gap-5'>
+        <h1 className='text-center text-uppercase text-dark-outline text-red'>
+          Latest Job
+        </h1>
         <div className=''>
-          <div className='row row-cols-md-2 row-cols-1 px-5 row-gap-3'>
-            {jobs.slice(page * 4, 4 * (page + 1)).map((job, index) => (
+          <div className='row px-5 gap-2'>
+            {jobs.slice(0, cardShown).map((job, index) => (
               <LatestJobCard key={index} {...job} />
             ))}
           </div>
         </div>
+        <div className='w-100 d-flex justify-content-center'>
+          <button
+            onClick={() => setViewMore(!viewMore)}
+            className='text-center fs-3 btn btn-outline-dark rounded-0 px-5'>
+            {buttonText}
+          </button>
+        </div>
       </div>
-      <div className='d-flex pt-5 gap-5 justify-content-center'>
-        <button
-          className='btn btn-light'
-          disabled={isPrevDisabled}
-          onClick={prevPage}>
-          <BsChevronLeft color='#3e3e3e' size={32} />
-        </button>
-        <button
-          className='btn btn-light'
-          disabled={isNextDisabled}
-          onClick={nextPage}>
-          <BsChevronRight color='#3e3e3e' size={32} />
-        </button>
-      </div>
+      <div className='d-flex pt-5 gap-5 justify-content-center'></div>
     </section>
   )
 }

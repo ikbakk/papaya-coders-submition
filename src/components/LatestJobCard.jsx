@@ -3,21 +3,19 @@ import { BiTimeFive } from 'react-icons/bi'
 
 const LatestJobCard = ({ title, posted, location, description, link }) => {
   return (
-    <div className='py-3'>
-      <div className='card'>
-        <div className='card-body d-flex flex-column flex-md-row gap-3'>
-          <figure className='d-flex d-md-block justify-content-center'>
-            <img src='../assets/latest-jobs.png' alt='latestjob' />
+    <div id='job-card' className='py-1 col'>
+      <div className='card rounded-0 bg-dark'>
+        <div className='card-body d-flex flex-column align-items-center flex-md-row gap-3'>
+          <figure className='d-fle align-items-center'>
+            <img
+              className='fit-cover'
+              src='../assets/latest-jobs.jpg'
+              alt='latestjob'
+            />
           </figure>
-          <div>
-            <h5 className='card-title'>{title}</h5>
+          <div className='text-light w-100'>
             <div className='d-flex justify-content-between'>
-              <div className='d-flex gap-2'>
-                <div>
-                  <BiTimeFive size={22} />
-                </div>
-                <p>{posted}</p>
-              </div>
+              <h5 className='card-title'>{title}</h5>
               <div className='d-flex gap-2'>
                 <div>
                   <IoLocationSharp size={22} />
@@ -25,10 +23,19 @@ const LatestJobCard = ({ title, posted, location, description, link }) => {
                 <p>{location}</p>
               </div>
             </div>
-            <p className='card-text'>{description}</p>
+            <div className='d-flex justify-content-between'>
+              <div className='d-flex gap-2'>
+                <div>
+                  <BiTimeFive size={22} />
+                </div>
+                <p>{posted}</p>
+              </div>
+            </div>
             <div className='d-flex justify-content-center w-100'>
-              <a href={`/${link}`} className='btn btn-danger w-75'>
-                View
+              <a
+                href={`/${link}`}
+                className='btn btn-outline-danger w-75 rounded-0'>
+                More Details
               </a>
             </div>
           </div>
