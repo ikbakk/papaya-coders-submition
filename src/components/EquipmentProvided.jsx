@@ -136,8 +136,10 @@ const EquipmentProvided = () => {
           <div className='gap-2 d-flex flex-column flex-md-row flex-wrap'>
             {tabActive.map((tab, index) => (
               <div key={index} className='nav-item'>
-                <div className='card'>
-                  <figure className='card-img-top px-3'>
+                <div
+                  className='card rounded-0 bg-dark border border-danger text-light'
+                  style={{ width: '14rem' }}>
+                  <figure className='d-flex justify-content-center'>
                     <img
                       src={`${tab.img}`}
                       width={150}
@@ -146,11 +148,21 @@ const EquipmentProvided = () => {
                     />
                   </figure>
                   <div className='card-body'>
-                    <p className='card-text'>{tab.title}</p>
+                    <h2 className='card-title fs-5'>{tab.title}</h2>
+                    <p className='text-truncate card-text'>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book.
+                    </p>
+                    <h2 className='card-text text-danger'>
+                      $300<small className='fs-6'> / day</small>
+                    </h2>
                   </div>
                   <div className='p-2'>
-                    <button className='btn btn-danger w-100 card-btn'>
-                      View
+                    <button className='btn btn-danger w-100 card-btn rounded-0'>
+                      More Details
                     </button>
                   </div>
                 </div>
